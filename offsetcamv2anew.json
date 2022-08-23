@@ -1,0 +1,12 @@
+{
+    "parameterSets": {
+        "design default values": {
+            "height": "5.5",
+            "holerotation": "15",
+            "index": "5",
+            "outerdiameter": "120",
+            "ringwidth": "5.5"
+        }
+    },
+    "fileFormatVersion": "1"
+}
