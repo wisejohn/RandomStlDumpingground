@@ -1,0 +1,77 @@
+{
+    "parameterSets": {
+        "Medium Size": {
+            "CenterCandleWidth": "6",
+            "candleSize": "9",
+            "centerCandle": "true",
+            "count": "7",
+            "heightOfRing": "4",
+            "heightOfSupport": "3",
+            "holeSize": "3",
+            "length": "50",
+            "radius": "25",
+            "width": "5",
+            "widthOfRing": "23",
+            "widthOfSupport": "3"
+        },
+        "small": {
+            "CenterCandleWidth": "4",
+            "candleSize": "6",
+            "centerCandle": "true",
+            "count": "7",
+            "heightOfRing": "2",
+            "heightOfSupport": "2",
+            "holeSize": "2",
+            "length": "30",
+            "radius": "16",
+            "width": "4",
+            "widthOfRing": "13",
+            "widthOfSupport": "2"
+        },
+        "With Ball": {
+            "CenterCandleWidth": "7",
+            "candleSize": "6",
+            "centerCandle": "false",
+            "count": "5",
+            "heightOfRing": "2",
+            "heightOfSupport": "2",
+            "holeSize": "2",
+            "length": "30",
+            "radius": "16",
+            "width": "4",
+            "widthOfRing": "13",
+            "widthOfSupport": "2"
+        },
+        "Large": {
+            "CenterCandleWidth": "10",
+            "candleSize": "9",
+            "centerCandle": "false",
+            "count": "7",
+            "heightOfRing": "4",
+            "heightOfSupport": "3",
+            "holeSize": "3",
+            "length": "70",
+            "radius": "25",
+            "width": "5",
+            "widthOfRing": "23",
+            "widthOfSupport": "3"
+        },
+        "design default values": {
+            "$fn": "128",
+            "bearing_depth": "7",
+            "bearing_od": "22.4",
+            "bottom_rim_h": "3",
+            "bottom_rim_od": "50",
+            "mount_flange_h": "3",
+            "mount_flange_od": "50",
+            "rope_hole_d": "4",
+            "spacer_id": "19.4",
+            "spool_core_od": "25.4",
+            "spool_width": "14",
+            "taper_h": "9",
+            "wheel_barrel_h": "20",
+            "wheel_barrel_od": "25.4"
+        }
+    },
+    "fileFormatVersion": "1"
+}
