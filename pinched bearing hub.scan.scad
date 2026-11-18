@@ -4,7 +4,7 @@
 
 /* [Bearing Dimensions (608 Standard)] */
 // Outer diameter of bearing (22mm + press-fit clearance)
-bearing_od = 22.4; 
+bearing_od = 22.36; 
 // Width/depth of bearing pocket (7mm standard)
 bearing_depth = 7.0; 
 
@@ -12,14 +12,14 @@ bearing_depth = 7.0;
 // Inner diameter of the pinched center hole
 center_hole_id = 9.0; 
 // Uniform wall thickness maintained throughout the part
-wall_thickness = 3.0; 
+wall_thickness = 1.52; 
 // Slope angle for the pinch transition (45 deg = ideal for overhang printing)
-slope_angle = 45.0; 
+slope_angle = 60.0; 
 // Extra flat straight section at the very center (0 for a sharp V-pinch)
-center_flat_length = 1.0; 
-extra_shaft = 24;
+center_flat_length = 3.0; 
+extra_shaft = 0;
 
-rope_hole_d     = 2.0;
+rope_hole_d     = 0.6;
 /* [Print Quality] */
 $fn = 120; // Circle smoothness
 
@@ -60,8 +60,9 @@ module pinched_bearing_hub() {
         [r_bearing + wall_thickness, total_height+extra_shaft],
         [r_bearing + wall_thickness, total_height - bearing_depth],
         [r_center  + wall_thickness, bearing_depth + slope_height + center_flat_length],
+    
         [r_center  + wall_thickness, bearing_depth + slope_height],
-        [r_bearing + wall_thickness, bearing_depth],
+        [r_bearing + wall_thickness, bearing_depth + (slope_height/2)],
         [r_bearing + wall_thickness, 0]
     ];
 
@@ -84,9 +85,9 @@ module pinched_bearing_hub() {
 
 module bearing_joiner() {
     difference(){
-cylinder(d = bearing_od, h = bearing_depth * 2);
+cylinder(d = bearing_od+0.4, h = bearing_depth * 2);
          translate([0, 0, -1])
-cylinder(d = bearing_od-2, h = (bearing_depth * 2) + 2);
+cylinder(d = bearing_od-3, h = (bearing_depth * 2) + 2);
 
 }
 }
@@ -95,11 +96,11 @@ cylinder(d = bearing_od-2, h = (bearing_depth * 2) + 2);
 
 
 
-pinched_bearing_hub();
+//pinched_bearing_hub();
     
  
-//translate([0,0,total_height-bearing_depth])
-//bearing_joiner();
+//translate([0,0,total_height+extra_shaft-bearing_depth])
+bearing_joiner();
 
 
 // Echo key calculated dimensions to the console
