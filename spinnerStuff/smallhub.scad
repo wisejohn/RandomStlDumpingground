@@ -17,7 +17,7 @@ wall_thickness = 1.52;
 slope_angle = 45.0; 
 // Extra flat straight section at the very center (0 for a sharp V-pinch)
 center_flat_length = 3.0; 
-extra_shaft = 20;
+extra_shaft = 2;
 
 rope_hole_d     = 1.5;
 /* [Print Quality] */
@@ -64,7 +64,7 @@ module pinched_bearing_hub() {
         [r_center  + wall_thickness, bearing_depth + slope_height + center_flat_length],
     
         [r_center  + wall_thickness, bearing_depth + slope_height],
-        [r_bearing + wall_thickness, bearing_depth + (slope_height/2)],
+        [r_bearing + wall_thickness, bearing_depth + slope_height - 1],
         [r_bearing + wall_thickness, 0]
     ];
 
