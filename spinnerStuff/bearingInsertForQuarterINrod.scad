@@ -34,13 +34,17 @@ module top_hat_bushing() {
     }
     
     // 3 internal crush ribs to eliminate thread slop and self-center the rod
-    for (angle = [0, 120, 240]) {
+  /*  for (angle = [0, 120, 240]) {
         rotate([0, 0, angle])
             translate([(rod_diameter / 2) - crush_rib_inset, 0, flange_thickness])
                 cylinder(d = crush_rib_inset * 2.5, h = barrel_length);
-    }
+    }*/
 }
+top_hat_bushing();
 
+/*
 // Render a pair side-by-side
 translate([-8, 0, 0]) top_hat_bushing();
 translate([8, 0, 0]) top_hat_bushing();
+
+*/
